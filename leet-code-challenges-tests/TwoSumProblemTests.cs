@@ -32,5 +32,32 @@ namespace leet_code_challenges_tests
             Assert.AreEqual(num1, 1);
             Assert.AreEqual(num2, 4);
         }
+
+        [Test]
+        public void TwoSumOptimizedTestIfExceptionIsThrownIncaseOfNoMatch()
+        {
+            var twoSumProblem = new TwoSumProblem();
+            var testArray = new int[] { 5, 7, 2, 15, 6, 3 };
+
+            ApplicationException ex = Assert.Throws<ApplicationException>(() =>
+            {
+                var (num1, num2) = twoSumProblem.TwoSumOptimized(testArray, 99);
+            });
+
+            Assert.That(ex.Message, Is.EqualTo("No match found"));
+        }
+
+        [Test]
+        public void TwoSumBruteForceTestIfExceptionIsThrownIncaseOfNoMatch()
+        {
+            var twoSumProblem = new TwoSumProblem();
+            var testArray = new int[] { 5, 7, 2, 15, 6, 3 };
+            ApplicationException ex = Assert.Throws<ApplicationException>(() =>
+            {
+                var (num1, num2) = twoSumProblem.TwoSumOptimized(testArray, 99);
+            });
+
+            Assert.That(ex.Message, Is.EqualTo("No match found"));
+        }
     }
 }
