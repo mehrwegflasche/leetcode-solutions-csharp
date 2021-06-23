@@ -15,11 +15,22 @@ namespace leet_code_challenges_tests
         public void TwoSumBruteForceTest()
         {
             var twoSumProblem = new TwoSumProblem();
-            var testArray = new int[] { 2, 3, 5, 6, 7 };
-            var (num1, num2) = twoSumProblem.TwoSumBruteForce(testArray, 10);
+            var testArray = new int[] { 5, 7, 2, 15, 6, 3 };
+            var (num1, num2) = twoSumProblem.TwoSumBruteForce(testArray, 20);
 
-            Assert.AreEqual(num1, 2);
-            Assert.AreEqual(num2, 5);
+            Assert.AreEqual(num1, 1);
+            Assert.AreEqual(num2, 4);
+        }
+
+        [Test]
+        public void TwoSumOptimizedTest()
+        {
+            var twoSumProblem = new TwoSumProblem();
+            var testArray = new int[] { 5, 7, 2, 15, 6, 3 };
+            var (num1, num2) = twoSumProblem.TwoSumOptimized(testArray, 20);
+
+            Assert.AreEqual(num1, 1);
+            Assert.AreEqual(num2, 4);
         }
     }
 }
